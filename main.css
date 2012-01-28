@@ -1,0 +1,365 @@
+html {
+	background-color: #ccc; /*blue:#4e89a2, lightblue:#94cde5 green:#4dda64  */
+	background-image: -webkit-gradient(
+		linear, left top, right top, 
+		color-stop(.25, rgba(0, 0, 0, .03)), 
+		color-stop(.25, transparent), 
+		color-stop(.5, transparent), 
+		color-stop(.5, rgba(0, 0, 0, .03)), 
+		color-stop(.75, rgba(0, 0, 0, .03)), 
+		color-stop(.75, transparent), 
+		to(transparent));
+	background-image: -webkit-linear-gradient(
+		180deg,
+		rgba(0, 0, 0, .03) 25%, 
+		transparent 25%,
+	    transparent 50%, 
+	    rgba(0, 0, 0, .03) 50%, 
+	    rgba(0, 0, 0, .03) 75%,
+	    transparent 75%, 
+	    transparent);    
+	background-image: -moz-linear-gradient(
+		180deg,
+		rgba(0, 0, 0, .03) 25%, 
+		transparent 25%,
+	    transparent 50%, 
+	    rgba(0, 0, 0, .03) 50%, 
+	    rgba(0, 0, 0, .03) 75%,
+	    transparent 75%, 
+	    transparent);
+	background-image: linear-gradient(
+		180deg, 
+		rgba(0, 0, 0, .03) 25%, 
+		transparent 25%,
+        transparent 50%, 
+        rgba(0, 0, 0, .03) 50%, 
+        rgba(0, 0, 0, .03) 75%,
+        transparent 75%, 
+        transparent);
+    background-image: -ms-linear-gradient(
+	    180deg, 
+	    rgba(0, 0, 0, .03) 25%, 
+	    transparent 25%,
+	    transparent 50%, 
+	    rgba(0, 0, 0, .03) 50%, 
+	    rgba(0, 0, 0, .03) 75%,
+	    transparent 75%, 
+	    transparent);
+	background-image: -o-linear-gradient(
+		180deg, 
+		rgba(0, 0, 0, .03) 25%, 
+		transparent 25%,
+		transparent 50%, 
+		rgba(0, 0, 0, .03) 50%, 
+		rgba(0, 0, 0, .03) 75%,
+		transparent 75%, 
+		transparent);            
+	background-size: 10px 10px;
+}
+
+body {
+	font: 14px/14px Arial, sans-serif;
+	color: #333;
+	height: auto;
+	/*position: fixed;*/
+	width: 80%;
+	margin: 15px 10%;
+	min-height: 220px;
+}
+
+.bar {
+	position: relative;
+	height: 100%;
+	
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+}
+
+#percentages {
+	position: relative;
+	float: right;
+	margin-top: 20px;
+	height: 20px;
+	width: 100%;
+	display: none;
+}
+
+#container {
+	position: relative;
+	float: right;
+	width: 100%;
+	height: 44px;
+	margin: 22px 0 0 0;
+}
+
+#goal-bar {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	background-color: rgba(0, 0, 0, .2);
+	width: 100%;
+	box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.5), inset 1px 0px 25px 2px rgba(0, 0, 0, 0.6);
+	-webkit-box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.5), inset 1px 0px 25px 2px rgba(0, 0, 0, 0.6);
+	-moz-box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.5), inset 1px 0px 25px 2px rgba(0, 0, 0, 0.6);
+}
+
+#user-time-bar {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	background-color: #4dda64; /*blue:#4e89a2, lightblue:#94cde5 green:#4dda64  */
+	background-image: -webkit-gradient(
+		linear, left top, right bottom, 
+		color-stop(.25, rgba(0, 0, 0, .03)), 
+		color-stop(.25, transparent), 
+		color-stop(.5, transparent), 
+		color-stop(.5, rgba(0, 0, 0, .03)), 
+		color-stop(.75, rgba(0, 0, 0, .03)), 
+		color-stop(.75, transparent), 
+		to(transparent));
+	background-image: -webkit-linear-gradient(
+		135deg,
+		rgba(0, 0, 0, .03) 25%, 
+		transparent 25%,
+	    transparent 50%, 
+	    rgba(0, 0, 0, .03) 50%, 
+	    rgba(0, 0, 0, .03) 75%,
+	    transparent 75%, 
+	    transparent);    
+	background-image: -moz-linear-gradient(
+		135deg,
+		rgba(0, 0, 0, .03) 25%, 
+		transparent 25%,
+	    transparent 50%, 
+	    rgba(0, 0, 0, .03) 50%, 
+	    rgba(0, 0, 0, .03) 75%,
+	    transparent 75%, 
+	    transparent);
+	background-image: linear-gradient(
+		135deg, 
+		rgba(0, 0, 0, .03) 25%, 
+		transparent 25%,
+        transparent 50%, 
+        rgba(0, 0, 0, .03) 50%, 
+        rgba(0, 0, 0, .03) 75%,
+        transparent 75%, 
+        transparent);
+    background-image: -ms-linear-gradient(
+	    135deg, 
+	    rgba(0, 0, 0, .03) 25%, 
+	    transparent 25%,
+	    transparent 50%, 
+	    rgba(0, 0, 0, .03) 50%, 
+	    rgba(0, 0, 0, .03) 75%,
+	    transparent 75%, 
+	    transparent);
+	background-image: -o-linear-gradient(
+		135deg, 
+		rgba(0, 0, 0, .03) 25%, 
+		transparent 25%,
+		transparent 50%, 
+		rgba(0, 0, 0, .03) 50%, 
+		rgba(0, 0, 0, .03) 75%,
+		transparent 75%, 
+		transparent);            
+	background-size: 10px 10px;
+	
+	/*-webkit-transition: all .8s ease;
+    -moz-transition: all .8s ease;
+    -o-transition: all .8s ease;
+    -transition: all .8s ease;*/
+	
+	width: 0%;
+	max-width: 100%;
+	box-shadow: inset 1px -1px 15px 1px rgba(0, 0, 0, 0.4), 1px 0px 2px rgba(0, 0, 0, 0.3) ;
+	-webkit-box-shadow: inset 1px -1px 15px 1px rgba(0, 0, 0, 0.4), 1px 0px 2px rgba(0, 0, 0, 0.3) ;
+	-moz-box-shadow: inset 1px -1px 15px 1px rgba(0, 0, 0, 0.4), 1px 0px 2px rgba(0, 0, 0, 0.3) ;
+}
+
+#user-time-bar span {
+	position: absolute;
+	width: 98%;
+	height: 1.5em;
+	left: 0px;
+	bottom: 0px;
+	text-align: right;
+	padding-right: 2%;
+	min-width: 40px;
+	display: none;
+}
+
+#today-bar {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: auto;
+	max-width: 100%;
+	height: 56px;
+	z-index: 100;
+}
+
+#today-bar:after {
+	content: "";
+	position: absolute;
+	top: 0px;
+	right: -1px;
+	width: 2px;
+	height: 44px;
+	background-color: rgba(255, 255, 255, 0.3);
+}
+
+#today-bar:before {
+	content: "";
+	position: absolute;
+	bottom: 2px;
+	right: -4px;
+	width: 0px;
+	height: 0px;
+	
+	border-bottom: 8px solid rgba(0, 0, 0, .6);
+	border-left: 4px solid transparent;
+	border-right: 4px solid transparent;
+	
+	/*background-color: rgba(55, 55, 55, 1.0);*/
+}
+
+#today-textbox {
+	position: absolute;
+	width: 70px;
+	height: 26px;
+	right: -35px;
+	bottom: -24px;
+	text-align: center;
+}
+
+#today-textbox .inside {
+	position: relative;
+	width:  50px;
+	margin: 0 auto;
+	padding: 5px;
+	background-color: rgba(0, 0, 0, .6);
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	border-radius:5px;
+	color: #fff;
+}
+#today-textbox .inside .bottom {
+	position: relative;
+	border-top: 1px dashed #777;
+	font: bold 20px/20px Arial, sans-serif;
+	padding: 5px 0 1px;
+	margin: 5px 2px 0;
+	color: #aaa;	
+}
+
+.direction {
+	position: relative;
+	width: auto;
+	height: auto;
+	float: left;
+	margin: 0 0 0 6px;
+	text-align: right;
+	
+	font: 16px/20px 'Helvetica Neue', Arial, sans-serif;
+	color: rgba(0, 0, 0, .4);
+	font-weight: bold;
+	text-shadow: 0px 0px 5px rgba(255,255,255, .5);
+}
+
+#input-wrapper {
+	position: relative;
+	float: left;
+	display: block;
+	text-align: center;
+	width: 45%;
+}
+
+#input-wrapper span {
+	margin-left: -5px;
+}
+
+input.hr-counter {
+	height:auto;
+	width:100%;
+	float: left;
+	font-size:36px;
+	font-family:Arial, sans-serif;
+	color: #49ce5e;
+	font-weight: bold;
+	border:none;
+	background-color:#f1f1f1;
+	text-align: center;
+	display: block;
+	padding: .2em 0 .2em 0em;
+	margin: 3px 0 0 0;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	-webkit-appearance: none;
+	box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.1), inset -1px 1px 3px 1px rgba(0, 0, 0, 0.6);
+	-webkit-box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.1), inset -1px 1px 3px 1px rgba(0, 0, 0, 0.6);
+	-moz-box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.1), inset -1px 1px 3px 1px rgba(0, 0, 0, 0.6);
+	/*text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);*/
+}
+
+	input[type=number]::-webkit-outer-spin-button {
+    	-webkit-appearance: none;
+}
+
+#goal-wrap {
+	position: relative;
+	width: 45%;
+	float: right;
+	margin: 0px 0 0 0;
+	text-align: left;
+
+	font: 16px/20px 'Helvetica Neue', Arial, sans-serif;
+	color: rgba(255,255,255, .5);
+}
+
+#goal-selector {
+	position: relative;
+	width: 100%;
+	/*height: 55px;*/
+	margin: 3px 0 0 0;
+	padding: .2em 0 .2em 0em;
+	
+	font-size: 36px;
+	font-family: Arial, sans-serif;
+	font-weight: bold;
+	/*text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);*/
+	text-align: center;
+	
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border: none;
+	background-color: #f1f1f1;
+	color: #666;
+	box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.1), inset -1px 1px 3px 1px rgba(0, 0, 0, 0.6);
+	-webkit-box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.1), inset -1px 1px 3px 1px rgba(0, 0, 0, 0.6);
+	-moz-box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.1), inset -1px 1px 3px 1px rgba(0, 0, 0, 0.6);
+	-webkit-appearance: none;
+	-moz-appearance: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+input {
+	outline: 0;
+}
+
+/* for iPhone - Portrait */
+@media screen and (max-device-width: 480px) {
+	
+}
+
+/* for iPhone - Landscape */
+@media screen and (width: 480px) {
+	
+}

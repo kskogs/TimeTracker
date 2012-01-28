@@ -1,0 +1,109 @@
+<!DOCTYPE HTML>
+<html manifest="cache.manifest">
+	<head>
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1"/> 
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<link rel="apple-touch-icon" href="apple-touch-icon.png"/>
+		<link href="main.css" rel="stylesheet" type="text/css" />
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.3/jquery.min.js"></script>
+		<title>TimeTracker</title>
+		
+		<script language="javascript">
+			var monthName = new Array ("Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sept", "Oct", "Nov", "Dec")
+			var monthDays = new Array ("31", "28", "31", "30", "31", "30", "31", "31", "30", "31", "30", "31") 
+			var dayName = new Array ("0","1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31")
+			var now = new Date
+			var dayOfMonth = now.getDate()		
+			var theMonth = monthName[now.getMonth()]
+			var daysInMonth = monthDays[now.getMonth()]
+			var dayPlus = dayName[now.getDate()]
+			 
+			function changeIt() {
+			    $('#user-time-bar').animate({'width':$('.hr-counter').attr('value') * 100 / $('#goal-selector').attr('value') + '%'});
+			}
+ 		</script>
+ 		
+		<!-- Google Analytics Code: -->
+		<script type="text/javascript">
+			var _gaq = _gaq || [];
+			_gaq.push(['_setAccount', 'UA-23930212-1']);
+			_gaq.push(['_trackPageview']);
+
+			(function() {
+  				var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  				ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+			})();
+		</script>
+	</head>
+	
+	<body onload="changeIt()">
+		<div id="input-wrapper">
+		<div class="direction">HOURS</div>
+			<input type="number" onFocus="this.value=''" onChange="changeIt(event)" onBlur="changeIt(event)" value="0" class="hr-counter" id="field" />
+		</div>
+		
+		<div id="goal-wrap">
+			<div class="direction">GOAL</div>
+			<input type="number" onFocus="this.value=''" id="goal-selector" onChange="changeIt()" value="70" />
+		</div>
+		
+		<div id="container">
+			<div id="goal-bar" class="bar"></div>
+			<div id="user-time-bar" class="bar"></div>
+			<div id="today-bar">
+				<div id="today-textbox">
+					<div class="inside">
+						<div class="top">
+							<script type="text/javascript">
+								document.write(theMonth + " " + dayPlus);
+							</script>
+						</div>
+						<div class="bottom">
+							<script type="text/javascript">
+								document.write(Math.round($("#goal-selector").attr("value") / daysInMonth * dayOfMonth));
+							</script>
+						</div>
+					</div>
+				</div>	
+			</div>
+			
+		</div> <!-- /container -->
+		
+		<script type="text/javascript">
+			document.getElementById('today-bar').style.width = dayOfMonth * 100 / daysInMonth + '%';
+			
+ 			// Get the text field that we're going to track
+	 		var field = document.getElementById("field");
+	 		var select = document.getElementById("goal-selector");
+			 
+			 // See if we have an autosave value
+			 // (this will only happen if the page is accidentally refreshed)
+			 if ( localStorage.getItem("autosave")) {
+			     // Restore the contents of the text field
+			     field.value = localStorage.getItem("autosave");
+			 }
+			 if ( localStorage.getItem("autosaveagain")) {
+			     select.value = localStorage.getItem("autosaveagain");
+			 }
+			 
+			 // Check the contents of the text field every second
+			 setInterval(function(){
+			     // And save the results into the session storage object
+			     localStorage.setItem("autosave", field.value);
+			     localStorage.setItem("autosaveagain", select.value);
+			 }, 100);
+		</script>
+		
+		<!-- Start of StatCounter Code
+		<script type="text/javascript">
+			var sc_project=6964395; 
+			var sc_invisible=1; 
+			var sc_security="a9a0aae7"; 
+		</script>
+		<script type="text/javascript" src="http://www.statcounter.com/counter/counter.js"></script>
+		End of StatCounter Code -->
+	</body>
+</html>
