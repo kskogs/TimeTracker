@@ -22,6 +22,7 @@
 			 
 			function changeIt() {
 			    $('#user-time-bar').animate({'width':$('.hr-counter').attr('value') * 100 / $('#goal-selector').attr('value') + '%'});
+			    $('.js-target').html(Math.round($("#goal-selector").attr("value") / daysInMonth * dayOfMonth));
 			}
  		</script>
  		
@@ -61,7 +62,7 @@
 								document.write(theMonth + " " + dayPlus);
 							</script>
 						</div>
-						<div class="bottom">
+						<div class="bottom js-target">
 							<script type="text/javascript">
 								document.write(Math.round($("#goal-selector").attr("value") / daysInMonth * dayOfMonth));
 							</script>
