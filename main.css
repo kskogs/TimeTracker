@@ -1,67 +1,8 @@
-html {
-	background-color: #ccc; /*blue:#4e89a2, lightblue:#94cde5 green:#4dda64  */
-	background-image: -webkit-gradient(
-		linear, left top, right top, 
-		color-stop(.25, rgba(0, 0, 0, .03)), 
-		color-stop(.25, transparent), 
-		color-stop(.5, transparent), 
-		color-stop(.5, rgba(0, 0, 0, .03)), 
-		color-stop(.75, rgba(0, 0, 0, .03)), 
-		color-stop(.75, transparent), 
-		to(transparent));
-	background-image: -webkit-linear-gradient(
-		180deg,
-		rgba(0, 0, 0, .03) 25%, 
-		transparent 25%,
-	    transparent 50%, 
-	    rgba(0, 0, 0, .03) 50%, 
-	    rgba(0, 0, 0, .03) 75%,
-	    transparent 75%, 
-	    transparent);    
-	background-image: -moz-linear-gradient(
-		180deg,
-		rgba(0, 0, 0, .03) 25%, 
-		transparent 25%,
-	    transparent 50%, 
-	    rgba(0, 0, 0, .03) 50%, 
-	    rgba(0, 0, 0, .03) 75%,
-	    transparent 75%, 
-	    transparent);
-	background-image: linear-gradient(
-		180deg, 
-		rgba(0, 0, 0, .03) 25%, 
-		transparent 25%,
-        transparent 50%, 
-        rgba(0, 0, 0, .03) 50%, 
-        rgba(0, 0, 0, .03) 75%,
-        transparent 75%, 
-        transparent);
-    background-image: -ms-linear-gradient(
-	    180deg, 
-	    rgba(0, 0, 0, .03) 25%, 
-	    transparent 25%,
-	    transparent 50%, 
-	    rgba(0, 0, 0, .03) 50%, 
-	    rgba(0, 0, 0, .03) 75%,
-	    transparent 75%, 
-	    transparent);
-	background-image: -o-linear-gradient(
-		180deg, 
-		rgba(0, 0, 0, .03) 25%, 
-		transparent 25%,
-		transparent 50%, 
-		rgba(0, 0, 0, .03) 50%, 
-		rgba(0, 0, 0, .03) 75%,
-		transparent 75%, 
-		transparent);            
-	background-size: 10px 10px;
-}
 
 body {
 	font: 14px/14px Arial, sans-serif;
 	color: #333;
 	height: auto;
-	/*position: fixed;*/
 	width: 80%;
 	margin: 15px 10%;
 	min-height: 220px;
@@ -97,84 +38,17 @@ body {
 	position: absolute;
 	top: 0px;
 	left: 0px;
-	background-color: rgba(0, 0, 0, .2);
+	background: #f1f1f1;
 	width: 100%;
-	box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.5), inset 1px 0px 25px 2px rgba(0, 0, 0, 0.6);
-	-webkit-box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.5), inset 1px 0px 25px 2px rgba(0, 0, 0, 0.6);
-	-moz-box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.5), inset 1px 0px 25px 2px rgba(0, 0, 0, 0.6);
 }
 
 #user-time-bar {
 	position: absolute;
 	top: 0px;
 	left: 0px;
-	background-color: #4dda64; /*blue:#4e89a2, lightblue:#94cde5 green:#4dda64  */
-	background-image: -webkit-gradient(
-		linear, left top, right bottom, 
-		color-stop(.25, rgba(0, 0, 0, .03)), 
-		color-stop(.25, transparent), 
-		color-stop(.5, transparent), 
-		color-stop(.5, rgba(0, 0, 0, .03)), 
-		color-stop(.75, rgba(0, 0, 0, .03)), 
-		color-stop(.75, transparent), 
-		to(transparent));
-	background-image: -webkit-linear-gradient(
-		135deg,
-		rgba(0, 0, 0, .03) 25%, 
-		transparent 25%,
-	    transparent 50%, 
-	    rgba(0, 0, 0, .03) 50%, 
-	    rgba(0, 0, 0, .03) 75%,
-	    transparent 75%, 
-	    transparent);    
-	background-image: -moz-linear-gradient(
-		135deg,
-		rgba(0, 0, 0, .03) 25%, 
-		transparent 25%,
-	    transparent 50%, 
-	    rgba(0, 0, 0, .03) 50%, 
-	    rgba(0, 0, 0, .03) 75%,
-	    transparent 75%, 
-	    transparent);
-	background-image: linear-gradient(
-		135deg, 
-		rgba(0, 0, 0, .03) 25%, 
-		transparent 25%,
-        transparent 50%, 
-        rgba(0, 0, 0, .03) 50%, 
-        rgba(0, 0, 0, .03) 75%,
-        transparent 75%, 
-        transparent);
-    background-image: -ms-linear-gradient(
-	    135deg, 
-	    rgba(0, 0, 0, .03) 25%, 
-	    transparent 25%,
-	    transparent 50%, 
-	    rgba(0, 0, 0, .03) 50%, 
-	    rgba(0, 0, 0, .03) 75%,
-	    transparent 75%, 
-	    transparent);
-	background-image: -o-linear-gradient(
-		135deg, 
-		rgba(0, 0, 0, .03) 25%, 
-		transparent 25%,
-		transparent 50%, 
-		rgba(0, 0, 0, .03) 50%, 
-		rgba(0, 0, 0, .03) 75%,
-		transparent 75%, 
-		transparent);            
-	background-size: 10px 10px;
-	
-	/*-webkit-transition: all .8s ease;
-    -moz-transition: all .8s ease;
-    -o-transition: all .8s ease;
-    -transition: all .8s ease;*/
-	
 	width: 0%;
 	max-width: 100%;
-	box-shadow: inset 1px -1px 15px 1px rgba(0, 0, 0, 0.4), 1px 0px 2px rgba(0, 0, 0, 0.3) ;
-	-webkit-box-shadow: inset 1px -1px 15px 1px rgba(0, 0, 0, 0.4), 1px 0px 2px rgba(0, 0, 0, 0.3) ;
-	-moz-box-shadow: inset 1px -1px 15px 1px rgba(0, 0, 0, 0.4), 1px 0px 2px rgba(0, 0, 0, 0.3) ;
+	background: #49CE5E;
 }
 
 #user-time-bar span {
@@ -297,14 +171,10 @@ input.hr-counter {
 	-webkit-border-radius:6px;
 	border-radius:6px;
 	-webkit-appearance: none;
-	box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.1), inset -1px 1px 3px 1px rgba(0, 0, 0, 0.6);
-	-webkit-box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.1), inset -1px 1px 3px 1px rgba(0, 0, 0, 0.6);
-	-moz-box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.1), inset -1px 1px 3px 1px rgba(0, 0, 0, 0.6);
-	/*text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);*/
 }
 
-	input[type=number]::-webkit-outer-spin-button {
-    	-webkit-appearance: none;
+input[type=number]::-webkit-outer-spin-button {
+	-webkit-appearance: none;
 }
 
 #goal-wrap {
@@ -321,14 +191,12 @@ input.hr-counter {
 #goal-selector {
 	position: relative;
 	width: 100%;
-	/*height: 55px;*/
 	margin: 3px 0 0 0;
 	padding: .2em 0 .2em 0em;
 	
 	font-size: 36px;
 	font-family: Arial, sans-serif;
 	font-weight: bold;
-	/*text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);*/
 	text-align: center;
 	
 	-moz-border-radius:6px;
@@ -337,9 +205,6 @@ input.hr-counter {
 	border: none;
 	background-color: #f1f1f1;
 	color: #666;
-	box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.1), inset -1px 1px 3px 1px rgba(0, 0, 0, 0.6);
-	-webkit-box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.1), inset -1px 1px 3px 1px rgba(0, 0, 0, 0.6);
-	-moz-box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.1), inset -1px 1px 3px 1px rgba(0, 0, 0, 0.6);
 	-webkit-appearance: none;
 	-moz-appearance: none;
 }
