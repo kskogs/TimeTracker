@@ -1,8 +1,8 @@
 CACHE MANIFEST
-# v.3.1
+# v.3.2
 
 CACHE:
-https://ajax.googleapis.com/ajax/libs/jquery/1.2.3/jquery.min.js
+jquery-1-2-3.min.js
 
 index.html
 
